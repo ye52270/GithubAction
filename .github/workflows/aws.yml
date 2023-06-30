@@ -35,7 +35,9 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
- 
+            
+      - name: Build with Gradle
+        run: ./gradlew build -x test
    
 #       - name: Make zip file
 #         run: zip -r ./$GITHUB_SHA .
