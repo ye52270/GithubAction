@@ -24,13 +24,11 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '17'
-          cache: 'gradle'
- 
+          java-version: '11'
+
       - name: BUild with Gradle
-        run: ./gradlew build --no-daemon
-        shell: bash
-        
+        run: build gradle
+   
 #       - name: Make zip file
 #         run: zip -r ./$GITHUB_SHA .
 #         shell: bash
