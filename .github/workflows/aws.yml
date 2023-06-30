@@ -25,7 +25,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - run: java --version
+      - run: ./gradlew build --no-daemon
  
    
 #       - name: Make zip file
